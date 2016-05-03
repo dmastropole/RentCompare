@@ -33,12 +33,11 @@ def make_hist(prices):
     hist, edges = np.histogram(prices)
     x = np.linspace(min(prices), max(prices), 1)
     
-    p = figure(title="Prices",tools="save", background_fill_color="#E8DDCB")
+    p = figure(title="Boston Apartments",tools="save", 
+        background_fill_color="#E8DDCB", 
+        x_axis_label="Prices [$]", y_axis_label="Number of Listings")
     p.quad(top=hist, bottom=0, left=edges[:-1], right=edges[1:],
         fill_color="#036564", line_color="#033649")
-    p.xaxis.axis_label = 'prices [$]'
-    p.yaxis.axis_label = 'number of listings'
-    
     return p
 
 #flask part of the code
@@ -47,8 +46,8 @@ app = Flask(__name__)
 
 def root():
     prices = scrape_prices(url)
-    plot = make_hist(prices)
-    script, div = embed.components(plot)
+    p = make_hist(prices)
+    script, div = embed.components(p)
     return render_template('histograms.html',script = script,div = div)
 
 if __name__ == '__main__':

@@ -1,28 +1,18 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="utf-8">
-        <title>Bokeh Plot</title>
+        <title>Rent Compare</title>
         
-<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.css" type="text/css" />
+		<link rel="stylesheet" 		href="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.css" 		type="text/css" />
         
-<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
-<script type="text/javascript">
-    Bokeh.set_log_level("info");
-</script>
+		<script type="text/javascript" 		src="https://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
+
+		{{ script | safe }}
     </head>
     <body>
-        
-        <div class="plotdiv" id="649dad5e-8706-478e-a9e1-9c51c7643849"></div>
-        
-        <script type="text/javascript">
-            Bokeh.$(function() {
-            var docs_json = {"4b37c3e5-2283-4e3a-b58e-b95b9a263fed":{"roots":{"references":[{"attributes":{},"id":"f43ae03e-cca4-42e5-9971-eabcbdd75d16","type":"BasicTicker"},{"attributes":{"axis_label":"prices [$]","formatter":{"id":"4772b887-ad70-45bd-9799-92e48473beb8","type":"BasicTickFormatter"},"plot":{"id":"c3261c55-1d12-4c0f-84cd-04b6564444ac","subtype":"Figure","type":"Plot"},"ticker":{"id":"a52a1a9a-2399-4d25-91e5-24b98470d726","type":"BasicTicker"}},"id":"adbe6e1c-4f5d-44f2-a827-8930581a938f","type":"LinearAxis"},{"attributes":{},"id":"eed34380-416f-4820-b1f6-5bfea49e4405","type":"ToolEvents"},{"attributes":{"background_fill_color":{"value":"#E8DDCB"},"below":[{"id":"adbe6e1c-4f5d-44f2-a827-8930581a938f","type":"LinearAxis"}],"left":[{"id":"ff2e5654-ed31-43c3-bcc9-afb227dcf004","type":"LinearAxis"}],"renderers":[{"id":"adbe6e1c-4f5d-44f2-a827-8930581a938f","type":"LinearAxis"},{"id":"1a377465-147e-4b29-8d99-4aead0f38cff","type":"Grid"},{"id":"ff2e5654-ed31-43c3-bcc9-afb227dcf004","type":"LinearAxis"},{"id":"4609f035-14b4-4171-a831-d17f07e1b60f","type":"Grid"}],"title":"Prices","tool_events":{"id":"eed34380-416f-4820-b1f6-5bfea49e4405","type":"ToolEvents"},"tools":[{"id":"1fa7decc-7ab9-49b5-af43-c29f69c41e8d","type":"PreviewSaveTool"}],"x_range":{"id":"31030f1f-d68b-431e-8353-584a7f515d05","type":"DataRange1d"},"y_range":{"id":"b6e4fe83-927c-4584-ba10-e77c769baa2c","type":"DataRange1d"}},"id":"c3261c55-1d12-4c0f-84cd-04b6564444ac","subtype":"Figure","type":"Plot"},{"attributes":{"axis_label":"number of listings","formatter":{"id":"1165f08d-df75-4f36-94af-6496fce20a37","type":"BasicTickFormatter"},"plot":{"id":"c3261c55-1d12-4c0f-84cd-04b6564444ac","subtype":"Figure","type":"Plot"},"ticker":{"id":"f43ae03e-cca4-42e5-9971-eabcbdd75d16","type":"BasicTicker"}},"id":"ff2e5654-ed31-43c3-bcc9-afb227dcf004","type":"LinearAxis"},{"attributes":{"dimension":1,"plot":{"id":"c3261c55-1d12-4c0f-84cd-04b6564444ac","subtype":"Figure","type":"Plot"},"ticker":{"id":"f43ae03e-cca4-42e5-9971-eabcbdd75d16","type":"BasicTicker"}},"id":"4609f035-14b4-4171-a831-d17f07e1b60f","type":"Grid"},{"attributes":{"callback":null},"id":"31030f1f-d68b-431e-8353-584a7f515d05","type":"DataRange1d"},{"attributes":{"callback":null},"id":"b6e4fe83-927c-4584-ba10-e77c769baa2c","type":"DataRange1d"},{"attributes":{"plot":{"id":"c3261c55-1d12-4c0f-84cd-04b6564444ac","subtype":"Figure","type":"Plot"},"ticker":{"id":"a52a1a9a-2399-4d25-91e5-24b98470d726","type":"BasicTicker"}},"id":"1a377465-147e-4b29-8d99-4aead0f38cff","type":"Grid"},{"attributes":{},"id":"1165f08d-df75-4f36-94af-6496fce20a37","type":"BasicTickFormatter"},{"attributes":{"plot":{"id":"c3261c55-1d12-4c0f-84cd-04b6564444ac","subtype":"Figure","type":"Plot"}},"id":"1fa7decc-7ab9-49b5-af43-c29f69c41e8d","type":"PreviewSaveTool"},{"attributes":{},"id":"a52a1a9a-2399-4d25-91e5-24b98470d726","type":"BasicTicker"},{"attributes":{},"id":"4772b887-ad70-45bd-9799-92e48473beb8","type":"BasicTickFormatter"}],"root_ids":["c3261c55-1d12-4c0f-84cd-04b6564444ac"]},"title":"Bokeh Application","version":"0.11.1"}};
-            var render_items = [{"docid":"4b37c3e5-2283-4e3a-b58e-b95b9a263fed","elementid":"649dad5e-8706-478e-a9e1-9c51c7643849","modelid":"c3261c55-1d12-4c0f-84cd-04b6564444ac"}];
-            
-            Bokeh.embed.embed_items(docs_json, render_items);
-        });
-        </script>
+        <div class=page>
+			<h1>Data from craigslist</h1>
+        	{{div | safe}}
+        </div>
     </body>
 </html>
