@@ -1,0 +1,7 @@
+RentCompare
+by Dana Mastropole
+dmastropole@gmail.com
+
+RentCompare is an app that helps users make informed decisions when it comes to renting homes. It scrapes data from craigslist.org and enables users to quickly construct side-by-side cost comparisons for different types of units in different cities. Users can use this tool to answer questions such as, “How much more should I expect to pay for a two-bedroom/bathroom versus a one-bedroom/bathroom apartment in Denver?” and, “How much more expensive is it to rent in San Francisco than Boston?” In addition to showing users price distributions, RentCompare displays the walkability scores for the corresponding cities (scraped from walkscore.com).
+
+The original MATLAB version of the code is in the ./matlab directory and the (still in progress) Python implementation that has been deployed on Heroku (https://rent-comp-1990.herokuapp.com/) is in the ./python directory.
