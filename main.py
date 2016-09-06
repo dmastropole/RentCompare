@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from bokeh.plotting import figure, output_notebook, output_file, vplot, show
 from bokeh import embed
+from bokeh.models import Button
 
 #for plotting
 import numpy as np
@@ -45,9 +46,11 @@ app = Flask(__name__)
 @app.route('/')
 
 def root():
-    prices = scrape_prices(url)
+    scrape_button = Button(label='Scrape Data')
+    prices = button.on_click(scrape_prices(url))
+    #prices = scrape_prices(url)
     p = make_hist(prices)
-    script, div = embed.components(p)
+    script, div = embed.components(p,scrape_button)
     return render_template('histograms.html',script = script,div = div)
 
 if __name__ == '__main__':
