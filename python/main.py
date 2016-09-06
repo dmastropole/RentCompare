@@ -58,11 +58,11 @@ def root():
     button = Button(label="Press Me")
     button.on_click(scrape_prices(url))
     p = make_hist(prices)
-    layout = vform(button, p)
-    script, div = embed.components(layout)
+    #layout = vform(button, p)
+    #script, div = embed.components(layout)
+    script, div = embed.components(p)
     
     return render_template('histograms.html',script = script,div = div)
 
 if __name__ == '__main__':
-    app.run(debug=True)
-#     # app.run(port=33507)
+    app.run(host='0.0.0.0')
