@@ -47,7 +47,7 @@ app = Flask(__name__)
 
 def root():
     scrape_button = Button(label='Scrape Data')
-    prices = button.on_click(scrape_prices(url))
+    prices = scrape_button.on_click(scrape_prices(url))
     #prices = scrape_prices(url)
     p = make_hist(prices)
     script, div = embed.components(p,scrape_button)
