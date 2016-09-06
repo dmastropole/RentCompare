@@ -60,7 +60,7 @@ def root():
     p = make_hist(prices)
     #layout = vform(button, p)
     #script, div = embed.components(layout)
-    script, div = embed.components(p)
+    script, div = embed.components(p,button)
     
     return render_template('histograms.html',script = script,div = div)
 
